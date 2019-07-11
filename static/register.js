@@ -9,12 +9,18 @@ var app = new Vue({
 		location: '',
 		usernameRules: [
 			v => v.length <= 10 || 'username is too long',
+			v => v.length >= 4 || 'username is too short',
       v => !!v || 'username is required'
 		],
 		passwordRules: [
 			v => v.length >= 4 || 'password is too short',
-      v => !!v || 'password is required'
+			v => !!v || 'password is required'
 		],
+
+		confirmRules: [
+			v => v.length >= 4 || 'password is too short',
+			v => !!v || 'password is required',
+		]
 
     },
     methods: {       

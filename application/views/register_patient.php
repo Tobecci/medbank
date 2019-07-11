@@ -30,7 +30,7 @@
 					</v-layout>
 					<v-form action="<?php echo base_url('hospital/login'); ?>" method="post" v-model="valid" class="mt-2">
 						<v-text-field name="username" class="ml-5 mr-5" v-model="username" :rules="usernameRules" :counter="10" label="Username" required></v-text-field>
-						<v-text-field name="password" class="ml-5 mr-5" v-model="password" :rules="passwordRules" :type="'password'" required label="Password"></v-text-field>
+						<v-text-field name="password" class="ml-5 mr-5" v-model="password" :rules="confirmRules" :type="'password'" required label="Password"></v-text-field>
 						<v-btn class="mb-3 ml-5" :type="'submit'" color="primary" id="load"> Login</v-btn>
 						<v-card-text class="ma-3">Don't have an account? <a href="<?php echo base_url('hospital/register'); ?>">Create account</a></v-card-text>
 					</v-form>

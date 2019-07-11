@@ -6,13 +6,16 @@ var app = new Vue({
 		password: '',
 		usernameRules: [
 			v => v.length <= 10 || 'username is too long',
-      v => !!v || 'username is required'
+      		v => !!v || 'username is required'
 		],
 		passwordRules: [
 			v => v.length >= 4 || 'password is too short',
-      v => !!v || 'password is required'
+     		v => !!v || 'password is required'
 		],
     },
-    methods: {       
+    methods: {
+    	show: () => {
+
+    	},    
     },
 });
